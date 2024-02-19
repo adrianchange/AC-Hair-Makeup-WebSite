@@ -1,14 +1,23 @@
 <template>
-  <nav>
+
+    <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/services">Services</router-link> |
+    <router-link to="/gallery">Gallery</router-link>  |
+    <router-link to="/contact">Contact</router-link>
   </nav>
   <router-view/>
+
+
+
 </template>
+
+
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -17,7 +26,10 @@
 
 nav {
   padding: 30px;
+  background-color: #800024b6;
+  border-radius: 5px;
 }
+
 
 nav a {
   font-weight: bold;
