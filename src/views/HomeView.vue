@@ -1,6 +1,7 @@
 <template>
 
-    <HeaderWeb msg="Adrian Change Hair & Make-Up"/>
+    <HeaderWeb msg=" Hair & Make-Up"/>
+
  
 </template>
 
@@ -22,6 +23,7 @@ export default {
 .message{
   margin: 20px;
   font-family: 'Courier New', Courier, monospace;
+
 }
 
 

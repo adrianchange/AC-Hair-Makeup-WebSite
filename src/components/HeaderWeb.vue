@@ -1,12 +1,15 @@
 <template>
-   <h1>{{ msg }}</h1>
-  <div class="container">
-    <ul class="footer">
-      <li><a href="about">About</a></li>
-      <li><a href="services">Services</a></li>
-      <li><a href="gallery">Gallery</a></li>
-      <li><a href="contact">Contact</a></li>
-    </ul>
+  <div class="header-wrapper">
+    <!-- Eliminamos la barra de navegación de aquí para evitar duplicaciones, si es necesario -->
+    <h1>{{ msg }}</h1>
+    <div class="content-container">
+      <ul class="footer">
+        <li><a href="about">About</a></li>
+        <li><a href="services">Services</a></li>
+        <li><a href="gallery">Gallery</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -20,41 +23,64 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.header-wrapper {
+  text-align: center;
+  width: 100vw; /* Ancho de la vista completa */
+  height: 100vh; /* Altura de la vista completa */
+  background-image: url('https://res.cloudinary.com/da5uckicu/image/upload/MyWebsite/jhxazxqbjcnujhajfrof');
+  background-size: contain; /* Cambio clave para que la imagen se ajuste completamente */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  margin: 0; /* Elimina cualquier margen */
+  padding: 0; /* Elimina cualquier padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.main-nav {
+  padding: 20px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5); /* Semi-transparente para mejorar la visibilidad del texto */
+  color: white; /* Cambia el color del texto para mejorar el contraste */
 }
-li {
-  display: inline-block;
+
+.main-nav a {
+  color: white; /* Cambia el color de los enlaces para que sean visibles sobre el fondo */
+  text-decoration: none;
   margin: 0 10px;
 }
-a {
+
+.main-nav a.router-link-exact-active {
   color: #42b983;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40px;
+
+.content-container {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  background-color: #800024b6;
-}
-.container {
-  background-image: url('https://res.cloudinary.com/da5uckicu/image/upload/MyWebsite/jhxazxqbjcnujhajfrof');
-  background-size:cover;
-  background-position:center;
-  height: 60vh;
-  border-radius: 50px;
-  max-width: 700px;
-  margin-bottom: 200px;
-
-
+  justify-content: center;
+  align-items: center;
 }
 
+ul.footer {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
+ul.footer li {
+  display: inline;
+}
+
+ul.footer a {
+  color: white; /* Cambia el color para mejorar el contraste */
+  text-decoration: none;
+}
 </style>
+
+
